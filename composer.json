@@ -1,0 +1,37 @@
+{
+    "name": "robloach/templating-extras",
+    "type": "library",
+    "description": "Extra template engines for Symfony's Templating component",
+    "homepage": "http://github.com/robloach/templating-extras",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "See contributors",
+            "homepage": "http://github.com/robloach/templating-extras/graphs/contributors"
+        }
+    ],
+    "support": {
+        "issues": "http://github.com/robloach/templating-extras/issues"
+    },
+    "require": {
+        "php": ">=5.3.0",
+        "symfony/templating": "~2.5.3"
+    },
+    "require-dev": {
+        "pdepend/pdepend": "~1.0",
+        "phploc/phploc": "~2.0",
+        "phpmd/phpmd": "~1.0",
+        "phpunit/phpunit": "~3.0",
+        "satooshi/php-coveralls": "*",
+        "sebastian/phpcpd": "~2.0",
+        "smarty/smarty": "~3.1.18"
+    },
+    "suggest": {
+      "smarty/smarty": "Allows rendering using the Smarty template engine."
+    },
+    "autoload": {
+        "psr-0": {
+            "TemplatingExtras": "src/"
+        }
+    }
+}
