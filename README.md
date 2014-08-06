@@ -1,7 +1,7 @@
 # Templating Extras
 
 [![Build Status](https://travis-ci.org/RobLoach/templating-extras.png)](https://travis-ci.org/robloach/templating-extras)
-[![Coverage Status](https://coveralls.io/repos/robloach/templating-extras/badge.png?branch=master)](https://coveralls.io/r/robloach/templating-extras?branch=master)
+[![Coverage Status](https://coveralls.io/repos/RobLoach/templating-extras/badge.png?branch=master)](https://coveralls.io/r/robloach/templating-extras?branch=master)
 [![Total Downloads](https://poser.pugx.org/robloach/templating-extras/downloads.png)](https://packagist.org/packages/robloach/templating-extras)
 [![Latest Stable Version](https://poser.pugx.org/robloach/templating-extras/v/stable.png)](https://packagist.org/packages/robloach/templating-extras)
 
