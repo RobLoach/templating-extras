@@ -9,7 +9,7 @@ Extra template engines for [Symfony's Templating component](http://symfony.com/d
 
 ## Supported template engines
 
-* [Smarty](http://smarty.net)
+* [Smarty](http://smarty.net) ([SmartyEngine](src/TemplatingExtras/SmartyEngine.php))
 
 
 ## Installation
@@ -27,3 +27,25 @@ by adding it as a dependency to your project's composer.json file.
 
 Please refer to [Composer's documentation](https://github.com/composer/composer/blob/master/doc/00-intro.md#introduction)
 for more detailed installation and usage instructions.
+
+
+## Usage
+
+Instantiate one of the engines:
+
+``` php
+use TemplatingExtras\SmartyEngine;
+
+$templating = new SmartyEngine(array(
+    'template_dir' => '.'
+));
+
+echo $templating->render('hello.tpl', array('firstname' => 'Fabien'));
+```
+
+#### hello.tpl
+``` smarty
+Hello, {$firstname}!
+```
+
+See [Symfony's documentation on Templating](http://symfony.com/doc/current/components/templating/introduction.html#usage) for more information about using the different template engines available.
