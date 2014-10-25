@@ -1,37 +1,37 @@
 {
-    "name": "robloach/templating-extras",
+    "name": "robloach/templating-smarty",
     "type": "library",
-    "description": "Extra template engines for Symfony's Templating component",
-    "homepage": "http://github.com/robloach/templating-extras",
+    "description": "Symfony Templating Component support for Smarty.",
+    "homepage": "http://github.com/RobLoach/templating-smarty",
     "license": "MIT",
     "authors": [
         {
             "name": "See contributors",
-            "homepage": "http://github.com/robloach/templating-extras/graphs/contributors"
+            "homepage": "http://github.com/RobLoach/templating-smarty/graphs/contributors"
         }
     ],
     "support": {
-        "issues": "http://github.com/robloach/templating-extras/issues"
+        "issues": "http://github.com/RobLoach/templating-smarty/issues"
     },
     "require": {
         "php": ">=5.3.0",
-        "symfony/templating": "~2.5.3"
+        "symfony/templating": "~2.5.3",
+        "smarty/smarty": "~3.1.21"
     },
     "require-dev": {
-        "pdepend/pdepend": "~1.0",
-        "phploc/phploc": "~2.0",
-        "phpmd/phpmd": "~1.0",
-        "phpunit/phpunit": "~3.0",
-        "satooshi/php-coveralls": "*",
-        "sebastian/phpcpd": "~2.0",
-        "smarty/smarty": "~3.1.18"
-    },
-    "suggest": {
-      "smarty/smarty": "Allows rendering using the Smarty template engine."
+        "phpunit/phpunit": "~3.0"
     },
     "autoload": {
-        "psr-0": {
-            "TemplatingExtras": "src/"
+        "psr-4": {
+            "RobLoach\\TemplatingSmarty\\": "src/"
         }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "RobLoach\\TemplatingSmarty\\Test\\": "test/"
+        }
+    },
+    "scripts": {
+        "test": "./vendor/bin/phpunit"
     }
 }

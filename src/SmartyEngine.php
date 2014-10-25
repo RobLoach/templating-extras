@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the TemplatingExtras package.
+ * This file is part of the TemplatingSmarty package.
  *
  * (c) Rob Loach <robloach@gmail.com>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace TemplatingExtras;
+namespace RobLoach\TemplatingSmarty;
 
 use Symfony\Component\Templating\EngineInterface;
 

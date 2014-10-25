@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the TemplatingExtras package.
+ * This file is part of the TemplatingSmarty package.
  *
  * (c) Rob Loach <robloach@gmail.com>
  *
@@ -9,9 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace TemplatingExtras\Test;
+namespace RobLoach\TemplatingSmarty\Test;
 
-abstract class EngineTest extends \PHPUnit_Framework_TestCase
+use RobLoach\TemplatingSmarty\SmartyEngine;
+
+/**
+ * Tests for SmartyEngine.
+ *
+ * @see SmartyEngine
+ */
+class SmartyEngineTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * The engine instance itself.
@@ -22,6 +29,19 @@ abstract class EngineTest extends \PHPUnit_Framework_TestCase
      * The name of the template to use.
      */
     protected $template;
+
+    public function setUp()
+    {
+        parent::setUp();
+        $this->engine = new SmartyEngine(array(
+            'cache_dir' => __DIR__ . '/../../../build/smarty-cache',
+            'compile_dir' => __DIR__ . '/../../../build/smarty-compile',
+            'plugins_dir' => __DIR__ . '/../../../build/smarty-plugins',
+            'config_dir' => __DIR__ . '/../../../build/smarty-config',
+            'template_dir' => __DIR__ . '/Fixtures',
+        ));
+        $this->template = 'helloworld.smarty';
+    }
 
     public function testRender()
     {
