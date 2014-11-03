@@ -1,8 +1,8 @@
 # Templating Smarty
 
-[![Build Status](https://travis-ci.org/RobLoach/templating-extras.png)](https://travis-ci.org/RobLoach/templating-extras)
-[![Total Downloads](https://poser.pugx.org/robloach/templating-extras/downloads.png)](https://packagist.org/packages/robloach/templating-extras)
-[![Latest Stable Version](https://poser.pugx.org/robloach/templating-extras/v/stable.png)](https://packagist.org/packages/robloach/templating-extras)
+[![Build Status](https://travis-ci.org/RobLoach/templating-smarty.png)](https://travis-ci.org/RobLoach/templating-smarty)
+[![Total Downloads](https://poser.pugx.org/robloach/templating-smarty/downloads.png)](https://packagist.org/packages/robloach/templating-smarty)
+[![Latest Stable Version](https://poser.pugx.org/robloach/templating-smarty/v/stable.png)](https://packagist.org/packages/robloach/templating-extras)
 
 [Smarty](http://www.smarty.net) support for [Symfony's Templating component](http://symfony.com/doc/current/components/templating/introduction.html).
 
@@ -26,7 +26,7 @@ for more detailed installation and usage instructions.
 
 ## Usage
 
-Instantiate one of the engines:
+Instantiate the engine:
 
 ``` php
 use RobLoach\TemplatingExtras\SmartyEngine;
