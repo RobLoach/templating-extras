@@ -12,7 +12,7 @@
 namespace RobLoach\TemplatingSmarty;
 
 use Symfony\Component\Templating\EngineInterface;
-
+use Symfony\Component\Templating\TemplateNameParserInterface;
 use Smarty;
 
 /**
@@ -26,18 +26,29 @@ class SmartyEngine implements EngineInterface
     protected $smarty;
 
     /**
+     * A TemplateNameParserInterface instance
+     */
+    protected $parser;
+
+    /**
      * Build the Smarty engine.
      *
-     * @param array $options An array of parameters used to set up the Smarty
+     * @param array $options
+     *   An array of parameters used to set up the Smarty
      *   configuration. Available configuration values include:
      *     - cache_dir
      *     - compile_dir
      *     - config_dir
      *     - plugins_dir
      *     - template_dir
+     * @param TemplateNameParserInterface $parser
+     *   A TemplateNameParserInterface instance
      */
-    public function __construct($options)
+    public function __construct(TemplateNameParserInterface $parser, array $options = array())
     {
+        // The parser to use.
+        $this->parser = $parser;
+
         // Create the Smarty template engine.
         $this->smarty = new Smarty();
 
@@ -110,8 +121,9 @@ class SmartyEngine implements EngineInterface
      */
     public function supports($name)
     {
-        // @todo Figure out what to do here.
-        return true;
+        $template = $this->parser->parse($name);
+
+        return 'smarty' === $template->get('engine');
     }
 
     /**

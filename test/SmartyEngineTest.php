@@ -12,6 +12,7 @@
 namespace RobLoach\TemplatingSmarty\Test;
 
 use RobLoach\TemplatingSmarty\SmartyEngine;
+use Symfony\Component\Templating\TemplateNameParser;
 
 /**
  * Tests for SmartyEngine.
@@ -33,7 +34,8 @@ class SmartyEngineTest extends \PHPUnit_Framework_TestCase
     public function setUp()
     {
         parent::setUp();
-        $this->engine = new SmartyEngine(array(
+        $parser = new TemplateNameParser();
+        $this->engine = new SmartyEngine($parser, array(
             'cache_dir' => __DIR__ . '/../../../build/smarty-cache',
             'compile_dir' => __DIR__ . '/../../../build/smarty-compile',
             'plugins_dir' => __DIR__ . '/../../../build/smarty-plugins',

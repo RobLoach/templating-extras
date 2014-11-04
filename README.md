@@ -31,7 +31,8 @@ Instantiate the engine:
 ``` php
 use RobLoach\TemplatingExtras\SmartyEngine;
 
-$templating = new SmartyEngine(array(
+$parser = new Symfony\Component\Templating\TemplateNameParser();
+$templating = new SmartyEngine($parser, array(
     'template_dir' => '.'
 ));
 
